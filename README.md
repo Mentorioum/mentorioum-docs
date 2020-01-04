@@ -6,14 +6,13 @@ Drawing initial idea for Mentorium ecosystem, start with readme then organize co
 
 Use Cases:
 
-1. `User` creates an empty repository in github with any name
-1. `User` add `mentorbot` as a collaborator to your new project
-1. `Bot` creates an issue 'Rollup to Mentorium Course' with description like: 
-        `We have next cources to rollup: #c101. Basic React #c101. Advanced React etc. Choose cource your want by typing cource id or description.`
-1.  `User` send message `#c101`  
-1.  `Bot`  sends explanation like
-    `Hello there! We have rolled you to  #c101. Basic React.I'm closing that task`
-    First, you have to configure your repository.
-     As far as you done. Write me a comment like '@mentorbot done'
-     About me ...`
-1. `Bot` creates next task according to cource aggenda.
+# Rollup
+
+1. `User` goes to 'mentorium-issues' and creates issue 'Rollup to Mentorium Course' 
+1. `Bot` sends next message `We have next cources to rollup: #c101. Basic React #c101. Advanced React etc. Choose cource your want by typing cource id or description.`
+1.  `User` sends message `#c101`  
+1.  `Bot`  sends messsage `We have rolled up <userlogin> to cource. Repository for the cource created at 'c101-basic-react-<userlogin>'. Please check that repository was created. If everything is ok, then type 'Confirm', otherwise type 'Reject'`
+1. `User` types `Confirm`
+- If `User` types `Rejected`, then `Bot` removes previously created repository and close the task   
+1. `Bot`  closes task and creates next issue in `c101-basic-react-<userlogin>` repository according to cource agenda.
+
