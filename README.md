@@ -8,6 +8,7 @@ Use Cases:
 
 High-level overview of the system is [here](./use-case-diagram.md)
 
+
 ## 1.1 Rollup
 
 1. `User` goes to 'mentorium-issues' and creates issue 'Rollup to Mentorium Course'
