@@ -1,0 +1,29 @@
+@startuml
+|Mentor|
+start
+:Invite Participatns;
+note left
+  Mentor adds Trainee and
+  Assistant Bot as Collaborators
+  to project
+end note
+
+:Prepare Instructions;
+|Assistant|
+:Verify Instructions;
+note right
+ Check Collaborators
+ and Instructions format
+end note
+if (Has issues?) then (yes)
+  :Report about issues;
+  |Mentor|
+  :Change Instructions;
+  stop;
+else (no)
+  |Assistant|
+  :Create Education Session;
+endif
+
+stop
+@enduml

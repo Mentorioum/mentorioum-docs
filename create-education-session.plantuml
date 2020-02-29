@@ -1,0 +1,21 @@
+@startuml
+
+title Create and Start Education Session
+
+start
+
+:Get Education Instructions;
+
+while (Has yet one instructions?)
+  :Read Instruction;
+  :Transform Instruction to Task;
+  note right: Take care about dependencies
+  :Assign to Proper Participant;
+  :Add To Education Session;
+endwhile
+
+:Start Education Session;
+
+stop
+
+@enduml
